@@ -126,15 +126,16 @@ training_data = [
     # Thank you
     ("Thanks for the help", "thank"),
     ("Thank you", "thank"),
+     ("thank you", "thank"),
     ("Thanks a lot!", "thank"),
     ("Much appreciated", "thank"),
     ("Thank you for assisting me", "thank"),
 
     # Offers
     ("Do you have any offers?", "offers"),
-    ("Do you have any offer?", "offers"),
+    ("do you have any offer?", "offers"),
     ("any offer?", "offers"),
-    ("Are there any discounts?", "offers"),
+    ("are there any discounts?", "offers"),
 
     # Hours
     ("What are your operating hours?", "hours"),
@@ -182,12 +183,7 @@ training_data = [
     ("order number is 369258", "response"),
 ]
 
-def get_response(user_input):
-    user_input = user_input.lower().strip()  # Normalize input
-    for pattern, intent in training_data:
-        if user_input == pattern:
-            return responses.get(intent, "I'm sorry, I didn't understand that.")
-    return "I'm sorry, I didn't understand that."
+
 
 responses = {
     "greeting": "Hello! Welcome to Sweet Treats Bakery. How can I assist you today?",
