@@ -23,6 +23,10 @@ training_data = [
     # Purchase
     ("I want to place an order", "purchase"),
     (" i want  order cake", "purchase"),
+    (" how i order cake", "purchase"),
+    (" how to order cake", "purchase"),
+
+
     ("Can I buy some cookies?", "purchase"),
     ("Do you sell cupcakes?", "purchase"),
     ("I want to order a cake for delivery", "purchase"),
@@ -91,8 +95,14 @@ training_data = [
     ("My cake was not fresh", "support"),
     ("I received the wrong order", "support"),
     # Purchase (corrected and expanded)
+
+
     ("I want to place an order", "purchase"),
     ("I want to order a cake", "purchase"),
+      ("how i place a order ", "purchase"),
+    ("how to place a order ", "purchase"),
+     ("how to order  cake", "purchase"),
+    
     ("Can I buy some cookies?", "purchase"),
     ("Do you sell cupcakes?", "purchase"),
     ("I want to order a cake for delivery", "purchase"),
@@ -135,6 +145,9 @@ training_data = [
     ("Do you have any offers?", "offers"),
     ("do you have any offer?", "offers"),
     ("any offer?", "offers"),
+    ("offer details","offers"),
+    ("offers details","offers"),
+
     ("are there any discounts?", "offers"),
 
     # Hours
@@ -144,6 +157,9 @@ training_data = [
      ("open time", "hours"),
     ("open timing", "hours"),
     ("opening time", "hours"),
+     ("time", "hours"),
+      ("timing", "hours"),
+
 
     # Customization
     ("Can I customize my cake?", "customization"),
@@ -168,9 +184,9 @@ training_data = [
     ("I want to track my order", "ordernotreceived"),
 
     # Response with order ID
-    ("its my order number 123456789", "response"),
-    ("its my order number 7418528", "response"),
-    ("its my order number 1234", "response"),
+    ("its my order id 123456789", "response"),
+    ("its my order ID 7418528", "response"),
+    ("its my order ID 1234", "response"),
     ("i want to know the status of order 123456", "response"),
     ("order no is 987654", "response"),
     ("my order id is 456321", "response"),
@@ -180,7 +196,7 @@ training_data = [
     ("741852 is my order id", "response"),
     ("i placed order number 7894561230", "response"),
     ("pls check 258741 order", "response"),
-    ("order number is 369258", "response"),
+    ("order ID is 369258", "response"),
 ]
 
 
