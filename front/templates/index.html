@@ -8,184 +8,214 @@
 </head>
 
 
- 
-  <style>
+<style>
+  .heading {
+    text-align: center;
+    font-size: 2.5em;
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    margin-top: 20px;
+    box-shadow: 20px 30px 40px 30px #8abece;
+    background-color: #8abece;
+  }
+
+
+
+
+
+  .chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: auto;
+    
    
+  }
 
 
-    .chat-container {
-      display: flex;
-      justify-content:end;
-      align-items:end;
-      height: 120vh;
-      flex-direction: column;
-      padding-bottom: 1cm;
 
-      
+
+
+
+
+
+  .container {
+    padding: 30px;
+    
+    background-color: #630606;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    font-style: inherit;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    flex-wrap: nowrap;
+    gap: 10px;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+ 
+
+  .message {
+    margin-bottom: 15px;
+    padding: 10px 14px;
+    border-radius: 20px;
+    max-width: 75%;
+    word-wrap: break-word;
+  }
+
+  .left {
+    align-self: flex-start;
+    background-color: #3619192f;
+    text-align: left;
+    border-radius: 10px;
+    padding: 20px;
+
+  }
+
+  .right {
+    align-self: flex-end;
+    background-color: #3619192f;
+    text-align: right;
+    border-radius: 10px;
+  }
+
+  form {
+    margin-top: 20px;
+    display: flex;
+
+    flex-direction: column;
+    width: 350px;
+  }
+
+  form input[type="text"] {
+    margin-top: 10px;
+    padding: 10px;
+    margin-top: 7%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  h1 {
+    padding-right: 110px;
+  }
+
+  .search-box {
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 9%;
+    background-color: #af2a2a;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100px;
+    height: 60px;
+    
+    
+  }
+
+  .search-box:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(46, 107, 173, 0.5);
+    outline: none;
+    
+
+  }
+
+ 
+    
+    
+  
+ 
+
+  button{
+     border-radius: 10px;
+     height: 30px;
+     width: 60px;
+     margin-top: 30px;
+     background-color: #bdc6d0;
+     color: white;
+  }
+  button:hover{
+    background-color: #394857f7;
+  }
+
+  .search {
+    display: flex;
+    flex-direction:row;
+    flex-basis: 20px;
+    gap: 20px;
     
       
-    }
- 
-    h2 {
-      margin-bottom: 20px;
-    }
+    
+    
+  }
+  .one{
+     margin-bottom: 3px;
+     background-color: rgba(59, 55, 55, 0.145);
+     color: black;
 
-    .container {
-      background-color: #630606;
-      padding: 20px;
-      border-radius: 12px;
-      width: 400px;
-      height: 700px;
-      overflow-y: auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      border-radius: 15px;
-      font-style: inherit;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-weight: lighter;
-      flex-wrap: nowrap;
-    }
+  }
 
-    .message {
-      margin-bottom: 15px;
-      padding: 10px 14px;
-      border-radius: 20px;
-      max-width: 75%;
-      word-wrap: break-word;
-    }
 
-    .left {
-      align-self: flex-start;
-      background-color: #3619192f;
-      text-align: left;
-      border-radius: 10px;
-      padding: 20px;
+</style>
 
-    }
+<h2 class="heading" style="font-family: Cursive; box-shadow: ;">WELCOME TO THE SWEET BAKERY CHATBOT</h2>
 
-    .right {
-      align-self: flex-end;
-      background-color: #3619192f;
-      text-align: right;
-      border-radius: 10px;
-    }
+<div class="chat-container">
 
-    form {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      width: 350px;
-    }
 
-    form input[type="text"] {
-      margin-top: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      width: 100%;
-      box-sizing: border-box;
-    }
 
-    form button {
-      margin-top: 10px;
-      padding: 10px;
-      background-color: #565a4fcb;
-      color: #000000;
-      border: rgb(221, 230, 222);
-      border-radius: 360px;
-      cursor: pointer;
-      transform: rotateX('34');
-    }
-    h1{
-      padding-right: 110px;
-    }
-   
-  </style>
+  <div class="container" id="chat-container" style="background-color: #aab0e2;">
 
-  <div class="chat-container">
-    <div class="title">
-
-      
-       <h2 style="padding-right: 20cm;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">WELCOME TO THE SWEET BAKERY CHATBOT</h2>
+    {% for speaker, message in chat_history %}
+    <div class="message {% if speaker == 'You' %}right{% else %}left{% endif %}">
+      <strong>{{ speaker }}:</strong><br>{{ message }}
     </div>
-   
-   
-    <div class="container" id="chat-container" style="background-color: #aab0e2;">
-      
-      {% for speaker, message in chat_history %}
-      <div class="message {% if speaker == 'You' %}right{% else %}left{% endif %}">
-        <strong>{{ speaker }}:</strong><br>{{ message }}
-      </div>
-      {% endfor %}
+    {% endfor %}
 
 
 
 
-    </div>
-    <form method="post">
 
-      <div style="display: flex; align-items: center; margin-left: 20px;
- ">
-        <input class="search-box" type="text" name="message" placeholder="Type your message..." required
-          style="flex-grow: 1; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-        <button type="submit" style="margin-left: 10px;">send</button>
-      </div>
-      <style>
-        .search-box {
-          font-size: 16px;
-          color: #333;
-          background-color: #f9f9f9;
-          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-          transition: border-color 0.3s ease, box-shadow 0.3s ease;
-          width: 500px;
-          height: 60px;
-        }
 
-        .search-box:focus {
-          border-color: #007bff;
-          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-          outline: none;
-        
-        }
-
-        button[type="submit"] {
-          font-size: 16px;
-          font-weight: bold;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          padding: 10px 20px;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        button[type="submit"]:hover {
-          background-color: #0056b3;
-          transform: scale(1.05);
-        }
-
-        button[type="submit"]:active {
-          background-color: #004085;
-          transform: scale(0.95);
-        }
-       
-      </style>
-    </form>
-    <h2 style="padding-right: 20cm;padding-left: 5cm;color: #333;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-style: italic;padding-bottom: 2cm; padding-bottom: 2.5cm;">  ***If you have any doubts, feel free to chat with our bakery assistant!</h2>
   </div>
+  <form method="post">
+   
+    <div class="search">
+      <input class="one"  type="text" name="message" placeholder="enter your message" required>
+      <button type="submit">send</button>
+      <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
   
-  <script>
-    // Scroll to bottom on page load
-    window.onload = function () {
-      const chatContainer = document.getElementById("chat-container");
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    };
-  </script>
+    </div>
+    
+   
+
+
+
+
+</div>
+
+<script>
+  // Scroll to bottom on page load
+  window.onload = function () {
+    const chatContainer = document.getElementById("chat-container");
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  };
+</script>
 
 </body>
-
-
-<img src="{% static 'app/image/drawing.jpg' %}" class="one" style="position: absolute; bottom: 0; left: 0; width: 900px; height: 500px; z-index: -1;padding-left: 2cm;padding-bottom: 3cm; ">
+</html>
